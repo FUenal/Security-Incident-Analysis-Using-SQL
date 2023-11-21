@@ -1,5 +1,5 @@
 # Security Incident Analysis Using SQL
-![Dark Purple Technical Roadmap Brainstorm(6)](https://github.com/FUenal/Security-Incident-Analysis-Using-SQL/blob/main/1.png)
+![Dark Purple Technical Roadmap Brainstorm(6)](https://github.com/FUenal/Security-Incident-Analysis-Using-SQL/blob/main/assets/1.png)
 
 ## Introduction
 
@@ -27,7 +27,7 @@ WHERE login_time > '18:00' AND success = 0;
 
 <summary>The Results:</summary>
   
-![SQLQUERY](https://github.com/AmiliaSalva/Security-Incident-Investigation-After-Hours-Failed-Login-Attempts-Analysis-Using-SQL/assets/132176058/c452a1d3-519e-4e6c-a20c-875160576533)
+![SQLQUERY](https://github.com/FUenal/Security-Incident-Analysis-Using-SQL/blob/main/assets/2.png)
 
 </details>
 
@@ -38,14 +38,14 @@ WHERE login_time > '18:00' AND success = 0;
  
 ## Scenario 2
 
-In this situation, I came across a dubious event that occurred on May 9, 2022. To conduct a comprehensive investigation into this incident, my attention was directed towards scrutinizing all login attempts that occurred on that particular day and the day before. Employing SQL filters, I formulated a query that pinpointed all login attempts within the timeframe of May 8 and May 9, 2022, by filtering records based on the "login_date" column.
+In this situation, I came across a dubious event that occurred on November 9, 2023. To conduct a comprehensive investigation into this incident, my attention was directed towards scrutinizing all login attempts that occurred on that particular day and the day before. Employing SQL filters, I formulated a query that pinpointed all login attempts within the timeframe of November 8 and November 9, 2023, by filtering records based on the "login_date" column.
 
 I utilized the subsequent query:
 
 ```
 SELECT *
 FROM log_in_attempts
-WHERE login_date >= '2022-05-08' AND login_date <= '2022-05-09';
+WHERE login_date >= '2023-11-08' AND login_date <= '2023-11-09';
 
 ```
 <details close>
@@ -53,7 +53,7 @@ WHERE login_date >= '2022-05-08' AND login_date <= '2022-05-09';
 <summary>The Results:</summary>
 
 
-![SQLQUERY2](https://github.com/AmiliaSalva/Security-Incident-Investigation-After-Hours-Failed-Login-Attempts-Analysis-Using-SQL/assets/132176058/b66b7e33-b7be-43c3-800e-e0a2d81a32d8)
+![SQLQUERY2](https://github.com/FUenal/Security-Incident-Analysis-Using-SQL/blob/main/assets/3.png)
 
 
 </details>
@@ -82,7 +82,7 @@ WHERE country NOT LIKE 'MEX%';
 <summary>The Results:</summary>
 
 
-![SQLQUERY4](https://github.com/AmiliaSalva/Security-Incident-Investigation-After-Hours-Failed-Login-Attempts-Analysis-Using-SQL/assets/132176058/dbfc324e-7e1e-4a43-b6c6-bfac07b7ebe4)
+![SQLQUERY4](https://github.com/FUenal/Security-Incident-Analysis-Using-SQL/blob/main/assets/4.png)
 
 
 
@@ -113,7 +113,7 @@ WHERE department = 'Marketing' AND office LIKE 'East-%';
 
 
 
-![SQLQUERY3](https://github.com/AmiliaSalva/Security-Incident-Investigation-After-Hours-Failed-Login-Attempts-Analysis-Using-SQL/assets/132176058/2421ac31-f378-4b0f-8d1a-cc93bb2cebd4)
+![SQLQUERY3](https://github.com/FUenal/Security-Incident-Analysis-Using-SQL/blob/main/assets/5.png)
 
 
 </details>
