@@ -3,20 +3,20 @@
 
 ## Introduction
 
-The purpose of these scenarios are to assess my proficiency in using SQL for data analysis and problem-solving. It aims to validate my ability to construct SQL queries, apply filters, and retrieve relevant information from a database based on specific criteria.
+The objective of these situations is to evaluate my competency in utilizing SQL for data analysis and addressing problems. It seeks to confirm my capability to formulate SQL queries, implement filters, and extract pertinent information from a database in accordance with specific criteria.
 
 ## Objective 
 
-This exercise evaluates my understanding of SQL syntax, query construction, and data retrieval techniques by simulating a scenario involving data analysis. It assesses my capability to navigate and query a database effectively, extracting valuable insights and information to address specific requirements or solve problems.
+This task assesses my grasp of SQL syntax, query creation, and data retrieval methods through a simulated data analysis scenario. It evaluates my proficiency in efficiently navigating and querying a database, extracting pertinent insights and information to meet specific requirements or solve problems.
 
-These scenarios serve as a practical demonstration of my SQL skills, showcasing my ability to manipulate data, apply filters, and analyze datasets to uncover patterns, anomalies, or other meaningful information. It showcases my competence in utilizing SQL as a versatile tool for querying and analyzing data, enabling me to extract valuable insights and draw informed conclusions.
+These exercises provide a hands-on illustration of my SQL proficiency, demonstrating my adeptness in manipulating data, implementing filters, and analyzing datasets to unveil patterns, anomalies, or other significant information. They underscore my competence in employing SQL as a versatile tool for querying and analyzing data, enabling me to extract valuable insights and draw informed conclusions.
 
 
 ## Scenario 1
 
-In this scenario, I encountered a potential security incident that took place after business hours. The incident prompted me to initiate an investigation to identify the root cause and assess the impact. To gain deeper insights into the situation, I needed to query the ``log_in_attempts`` table and focus on reviewing the login activity that occurred after the designated closing time of 6 PM.
+In this situation, I came across a potential security incident occurring outside regular business hours. This incident prompted me to launch an inquiry to pinpoint the underlying cause and evaluate its repercussions. To delve deeper into the matter, I had to execute a query on the ``log_in_attempts`` table, concentrating on examining login activity that occurred past the specified closing time of 6 PM.
 
-I used the following query:
+I employed the subsequent query:
 
 ```
 SELECT *
@@ -31,16 +31,16 @@ WHERE login_time > '18:00' AND success = 0;
 
 </details>
 
-> This query retrieves all columns from the ``log_in_attempts`` table where the login time is after ``18:00`` and the login attempt is unsuccessful (denoted by a value of ``0`` in the ``success`` column). It provides a way to filter and focus on failed login attempts that occurred after the specified time, allowing for further investigation into potential security incidents or anomalies.
+> This query fetches all columns from the ``log_in_attempts`` table where the login time is past ``18:00`` and the login attempt is unsuccessful (indicated by a value of ``0`` in the ``success`` column). It offers a means to filter and concentrate on unsuccessful login attempts that took place after the designated time, facilitating a more in-depth examination of potential security incidents or anomalies.
 
  <br />
  <br />
  
 ## Scenario 2
 
-In this scenario, I encountered a suspicious event that took place on May 9, 2022. To investigate this incident thoroughly, my focus was on reviewing all login attempts that occurred on that specific day and the preceding day. Utilizing SQL filters, I constructed a query that identified all login attempts falling within the timeframe of May 8 and May 9, 2022, by filtering records based on the login_date column.
+In this situation, I came across a dubious event that occurred on May 9, 2022. To conduct a comprehensive investigation into this incident, my attention was directed towards scrutinizing all login attempts that occurred on that particular day and the day before. Employing SQL filters, I formulated a query that pinpointed all login attempts within the timeframe of May 8 and May 9, 2022, by filtering records based on the "login_date" column.
 
-I used the following query:
+I utilized the subsequent query:
 
 ```
 SELECT *
@@ -58,18 +58,18 @@ WHERE login_date >= '2022-05-08' AND login_date <= '2022-05-09';
 
 </details>
 
-> By executing this SQL query, I aimed to retrieve all available information regarding the login attempts during the specified period. The query consisted of a ``WHERE`` clause that utilized the greater than or equal to ``(>=)`` and less than or equal to ``(<=)`` operators to encompass the dates May 8 and May 9, 2022.
+> Through the execution of this SQL query, my objective was to fetch all pertinent details regarding the login attempts within the designated timeframe. The query incorporated a ``WHERE`` clause employing the greater than or equal to ``(>=)`` and less than or equal to ``(<=)`` operators to encompass the dates May 8 and May 9, 2022.
 
-> The purpose of this query was to gather a comprehensive overview of the login activity on the specific days of interest, enabling a closer examination of the events leading up to and including the suspicious incident. By reviewing the retrieved data, I could delve deeper into the login attempts and extract valuable insights or patterns that might aid in the investigation and resolution of the suspicious event.
+> The aim of this query was to compile a thorough summary of the login activity during the specific days of interest, facilitating a more detailed analysis of the events leading up to and including the suspicious incident. Through the examination of the obtained data, I could delve deeper into the login attempts, extracting valuable insights or patterns that could contribute to the investigation and resolution of the suspicious event.
  
  <br />
  <br />
 
 ## Scenario 3
 
-In this scenario, there have been suspicious login attempts, and it has been determined that these attempts did not originate in Mexico. To investigate further, a query needed to be created to identify all login attempts that occurred outside of Mexico. The country column contains values such as MEX and MEXICO, requiring the use of the ``LIKE`` keyword with `` % `` to account for variations in the data.
+In this situation, there were suspicious login attempts, and it was established that these attempts did not originate from Mexico. To conduct a more in-depth investigation, a query had to be formulated to identify all login attempts that occurred outside of Mexico. The "country" column includes values such as MEX and MEXICO, necessitating the utilization of the ``LIKE`` keyword with ``%`` to accommodate variations in the data.
 
-I used the following query:
+I employed the subsequent query:
 
 ```
 SELECT *
@@ -88,18 +88,18 @@ WHERE country NOT LIKE 'MEX%';
 
 </details>
 
-> By executing this query, the login attempts that occurred outside of Mexico are identified. The results will provide insights into any suspicious activity originating from locations other than Mexico.
+> Through the execution of this query, it identifies the login attempts that took place outside of Mexico. The outcomes will offer insights into any suspicious activity originating from locations other than Mexico.
 
-> This query demonstrates the use of SQL filters and the ``LIKE`` keyword with ``%`` to narrow down the search to specific login attempts based on the country column. It effectively filters out records related to Mexico, which narrows down the focus into login attempts originating from other countries!
+> This query showcases the utilization of SQL filters and the ``LIKE`` keyword with ``%`` to refine the search to specific login attempts based on the country column. It efficiently excludes records related to Mexico, thereby narrowing the focus to login attempts originating from other countries!
 
  <br />
  <br />
 
 ## Scenario 4
 
-In this scenario, I have been tasked me with gathering information on employee machines in the Marketing department for security updates. To accomplish this, I needed to query the employees table using SQL filters to identify all employees within the Marketing department, specifically those located in offices within the East building.
+In this situation, I was assigned the responsibility of collecting information about employee machines in the Marketing department for security updates. To achieve this, I had to execute a query on the employees table using SQL filters to pinpoint all employees within the Marketing department, particularly those situated in offices within the East building.
 
-I used the following query:
+I employed the subsequent query:
 
 ```
 SELECT *
@@ -118,5 +118,5 @@ WHERE department = 'Marketing' AND office LIKE 'East-%';
 
 </details>
 
-> This query allows for precise filtering, ensuring that only employees in the Marketing department and located in offices within the East building are included in the result set. The retrieved information will provide the necessary details to proceed with the security updates on their respective machines.
-> By executing this query, I aimed to retrieve all columns ``( * )`` from the employees table where the department is Marketing and the office starts with ``'East-'``. The ``%`` wildcard is used after ``'East-'`` to match any characters that follow, enabling the identification of offices specifically within the East building.
+> This query enables precise filtering, ensuring that the result set includes only employees in the Marketing department and situated in offices within the East building. The obtained information will furnish the necessary details to proceed with the security updates on their respective machines.
+> Through the execution of this query, my intention was to fetch all columns ``( * )`` from the employees table where the department is Marketing and the office starts with ``'East-'``. The ``%`` wildcard is applied after ``'East-'`` to match any characters that follow, facilitating the identification of offices specifically within the East building.
