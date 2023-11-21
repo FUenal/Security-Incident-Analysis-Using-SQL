@@ -38,7 +38,7 @@ WHERE login_time > '18:00' AND success = 0;
  
 ## Scenario 2
 
-In this situation, I came across a dubious event that occurred on November 9, 2023. To conduct a comprehensive investigation into this incident, my attention was directed towards scrutinizing all login attempts that occurred on that particular day and the day before. Employing SQL filters, I formulated a query that pinpointed all login attempts within the timeframe of November 8 and November 9, 2023, by filtering records based on the "login_date" column.
+In this situation, I came across a dubious event that occurred on May 9, 2022. To conduct a comprehensive investigation into this incident, my attention was directed towards scrutinizing all login attempts that occurred on that particular day and the day before. Employing SQL filters, I formulated a query that pinpointed all login attempts within the timeframe of May 8 and May 9, 2022, by filtering records based on the "login_date" column.
 
 I utilized the subsequent query:
 
